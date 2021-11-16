@@ -1,17 +1,15 @@
-import React, { Fragment } from 'react';
 
-const Error = ({ mensaje }) => {
 
-    //const [state, setstate] = useState(initialState);
+import React from 'react';
+import PropTypes from 'prop-types';
 
-    return (
+const Error = ({ mensaje }) => (
+    <p className="alert alert-danger error"> {mensaje} </p>
+);
 
-        <Fragment>
-            <p className="alert alert-danger error">{mensaje}</p>
-        </Fragment>
+Error.propTypes = {
+    mensaje: PropTypes.string.isRequired
+}
 
-    );
-
-};
 
 export default Error;
